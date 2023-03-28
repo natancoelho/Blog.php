@@ -19,7 +19,7 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
 
 <main>
     <div id="title-container">
-      <h1>Passei Direto Blog</h1>
+      <h1>Blog de Programação</h1>
       <p>O seu blog de programação</p>
     </div>
     <div id="posts-container">
@@ -39,6 +39,8 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
       <?php endforeach; ?>
     </div>
   </main>
+
+
 <?php
   include_once("templates/footer.php")
 ?>

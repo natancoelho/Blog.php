@@ -12,23 +12,12 @@ html {
 }
 
 main {
-  margin-bottom: 250px;
+  margin-bottom: 400px;
 }
-
-/* FOOTER */
-
-footer {
-  margin-top: 20px;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  text-align: center;
-  background-color: #000;
-  color: #FFF;
-  padding: 10px;
-  
+img{
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
-
 /* NAVBAR */
 #logo {
   position: absolute;
@@ -37,20 +26,23 @@ footer {
 }
 
 #logo img {
-  width: 50px;
+  
+  width: 100px;
 }
 
 #navbar {
+  height: 65px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #161616;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
   padding: 20px;
   text-transform: uppercase;
   list-style: none;
 }
 
 #navbar li {
+  
   margin: 0 10px;
   padding: 5px;
 }
@@ -137,57 +129,205 @@ footer {
   margin-right: 5px;
 }
 
-.tudo{
-  width: 100%;
-  
 
+
+/* FOOTER */
+
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  padding: 50px 0;
+  color: #000;
 }
-h1{
+
+footer button[type="submit"] {
+  font-size: 30px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(39, 39, 39);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+
+
+footer button[type="submit"]:hover {
+  color: red;
+  cursor: pointer;
+}
+.cabeca h1{
   text-align: center;
   margin-bottom: 200px;
 }
-
-.tudo form{
+form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
-  border: 1px solid #ccc;
+  width: 300px;
+  margin: 50px auto;
   border-radius: 10px;
-  background-color: #fff;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  width: 300px; /* largura fixa */
-  height: 400px;
-  position: absolute; /* posicao absoluta para usar left e right */
-  left: 0;
-  right: 0;
-  margin: auto; /* centraliza horizontalmente */
-  
-  
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  padding: 20px;
 }
-.tudo label{
 
-  display: flex;
-  flex-direction: column;
-  height: 30%;
-  max-height: 100px;
+label {
+  font-weight: bold;
+  margin-bottom: 10px;
   
 }
-.tudo input{
-  margin-bottom: 10px;
+
+input[type="text"],
+input[type="password"] {
   padding: 10px;
-  font-size: 16px;
-  border-radius: 20px;
-  border: 1px solid #ccc;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 20px;
+  width: 100%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 button[type="submit"] {
-  background-color: #87CEFA;
+  background-color: #3498db;
   color: #fff;
+  padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 16px;
   cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
 }
 
+
+
+/* POST */
+#post-container {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: auto;
+  grid-template-areas: "main sidebar";
+  grid-gap: 10px;
+  padding-top: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 250px;
+}
+
+.content-container {
+  grid-area: main;
+}
+
+#main-title {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+#post-description {
+  font-style: italic;
+  margin-bottom: 40px;
+}
+
+.post-content {
+  line-height: 1.8;
+  margin: 10px 0;
+}
+
+.img-container {
+  margin-bottom: 30px;
+}
+
+.img-container img {
+  width: 60%;
+}
+
+/* POST ASIDE */
+.nav-container {
+  grid-area: sidebar;
+}
+
+#tags-title, #categories-title {
+  border-radius: 10px;
+  font-size: 24px;
+  margin-bottom: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  color: #1a1a1a;
+  text-align: center;
+  padding: 10px;
+  font-weight: 300;
+}
+
+#tag-list, #categories-list {
+  list-style: none;
+}
+
+#tag-list li, #categories-list li {
+  margin-bottom: 10px;
+}
+
+#tag-list a, #categories-list a {
+  color: #666;
+  transition: .5s;
+}
+
+#tag-list a:hover, #categories-list a:hover {
+  color: #000;
+}
+
+
+/* MOBILE */
+@media(max-width: 480px) {
+
+
+
+/* POST */
+#post-container {
+  grid-template-columns: 100%;
+  padding: 15px;
+  grid-template-areas: "main"
+  "sidebar";
+}
+
+.img-container img {
+  width: 100%;
+}
+
+}
+
+
+/* MOBILE */
+@media(max-width: 480px) {
+
+  /* HOME */
+  header {
+    width: 100%;
+  }
+
+  #logo {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    left: 0;
+    width: 50px;
+  }
+
+  #navbar {
+    display: none;
+  }
+
+  #title-container {
+    min-width: 100%;
+    margin-top: 20px;
+  }
+
+  #posts-container {
+    margin-top: 20px;
+  }
+
+  .post-box {
+    flex: 100% 1 0;
+    padding: 15px;
+    margin: 0;
+  }
+
+}

@@ -1,9 +1,23 @@
+<?php 
+    include_once("helpers/url.php");
+?>
 
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="<?= $BASE_URL?>/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="cabeca">
+    <h1>
+        Login
+    </h1>
+</div>
 
 <?php
-
-
-
 
 session_start(); // inicia a sessão
 
@@ -15,7 +29,7 @@ if(isset($_POST['username']) && isset($_POST['password'])) {
     header('Location: home.php'); // redireciona para a página de dashboard
     exit();
   } else {
-    $error = 'Nome de usuário ou senha inválido.'; // exibe uma mensagem de erro
+    echo '<script>alert("Nome de usuário ou senha inválido.")</script>'; // exibe uma mensagem de erro
   }
 }
 
@@ -39,4 +53,7 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
 
 ?>
 
+
+</body>
+</html>
 

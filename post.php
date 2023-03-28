@@ -33,10 +33,21 @@
       Perspiciatis sed numquam animi quae assumenda nesciunt voluptatibus rem! Deserunt, quae ex, pariatur nemo eveniet ipsam delectus aperiam aut quas blanditiis repellat quibusdam debitis sequi odit nostrum? Dolores, iure quam!
       Beatae vel corrupti laborum repudiandae, placeat neque officiis odit provident reiciendis ducimus amet rem. Exercitationem similique itaque labore asperiores quasi officia aspernatur quas soluta quos. Quasi aliquam in laboriosam illum.</p>
     </div>
-  
-
-</main>
-
+    <aside id="nav-container">
+      <h3 id="tags-title">Tags</h3>
+      <ul id="tag-list">
+        <?php foreach($currentPost['tags'] as $tag): ?>
+          <li><a href="#"><?= $tag ?></a></li>
+        <?php endforeach; ?>
+      </ul>
+      <h3 id="categories-title">Categorias</h3>
+      <ul id="categories-list">
+        <?php foreach($categories as $category): ?>
+          <li><a href="#"><?= $category ?></a></li>
+        <?php endforeach; ?>
+      </ul>
+    </aside>
+  </main>
 <?php
   include_once("templates/footer.php")
 ?>
