@@ -2,7 +2,7 @@ Projeto em PHP com base na aula de php do Matheus Battisti
 O projeto é um blog de programação 
 Porem eu fiz uma validaçao com usuário e senha
 
-Usuário: user
+Usuário: user <br>
 Senha: senha
 
 
