@@ -1,5 +1,11 @@
 Projeto em PHP com base na aula de php do Matheus Battisti
 O projeto é um blog de programação 
+Porem eu fiz uma validaçao com usuário e senha
+
+Usuário: user
+Senha: senha
+
+
 
 ![Capturar](https://user-images.githubusercontent.com/99759469/228390831-d36a65f9-2789-44f2-b8e7-56712c3a6c5d.PNG)
 ![2](https://user-images.githubusercontent.com/99759469/228390846-6099c6cf-2926-44ef-bf2a-d8948372d8a2.PNG)
